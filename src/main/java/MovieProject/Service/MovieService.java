@@ -21,6 +21,10 @@ public class MovieService {
         m.setDirector(d);
         movieRepository.save(m);
     }
+    public Director getDirectorByMovieId(int id){
+        Movie m = getMovieById(id);
+        return m.getDirector();
+    }
     public List<Movie> getAllMovies(){
         return movieRepository.findAll();
     }
