@@ -7,5 +7,5 @@ import org.springframework.data.repository.query.Param;
 
 public interface MovieRepository extends JpaRepository<Movie, Integer> {
     @Query("FROM Movie where movie_ID = :movie_ID")
-    public Movie findMovieById(@Param("movie_ID") int id);
+    Movie findMovieById(@Param("movie_ID") int id);
 }
